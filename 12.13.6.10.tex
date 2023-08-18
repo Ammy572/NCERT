@@ -217,16 +217,32 @@ EE22BTECH11006
 
 Question 12.13.10.6 - How many times must a man toss a fair coin so that the probability of having at least one head is more than 90\% ?
 
-\solution Given,
+\solution Let, \pr{X_i} be the sequence of independent Bernoulli random varibles. 
 \begin{align}
-\pr{H} = \frac{1}{2}\ \\
-\pr{T} = \frac{1}{2}\
+X_i &= 
+  \begin{cases}
+  1, & \text{coin toss result in a Heads}\\
+  0, & \text{result in Tails}
+  \end{cases}
 \end{align}
-Let, total number of trials = n and Z be the random variable that represents the number of heads in n trials.\\ 
-So,
+which means
+\begin{align}
+\pr{X_i = 1} = 0.5\\
+\pr{X_i = 0} = 0.5
+\end{align} 
+Let, the total number of trials be n and Z be the random variable that represents the number of heads in n trials which is given by:
+\begin{align}
+\pr{Z=k}=\comb{n}{k}\times q^{n-k}\times p^{k}
+\end{align}
+where 
+\begin{align}
+Z = X_1 + X_2 + ... + X_n
+\end{align}
+For atleast 1 Heads
 \begin{align}
 \pr{Z\geq1} > 0.9 \\
 1 - \pr{Z = 0} > 0.9\\
+1 - \pr{X_1=0,X_2=0 ... ,X_n=0} > 0.9\\
 1 - \comb{n}{0}\brak{0.5}^n\brak{0.5}^0 >0.9\\
 1 - \brak{0.5}^n >0.9\\
 0.1 > \brak{0.5}^n\\
