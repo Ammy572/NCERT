@@ -1,16 +1,18 @@
-import random
+import math
+import numpy as np
+from scipy.stats import bernoulli
 
-def simulate_coin_tosses(num_tosses, num_simulations):
-    return sum(any(random.randint(0, 1) == 1 for _ in range(num_tosses)) for _ in range(num_simulations)) / num_simulations
+def calculate_num_tosses(target_probability):
+    # Using the formula to calculate the number of tosses needed
+    num_tosses = math.ceil(math.log(1 - target_probability, 0.5))
+    return num_tosses
+    
+target_probability = 0.9  # 90% probability of at least one head
+num_tosses_needed = calculate_num_tosses(target_probability)
 
-def find_tosses_needed(req_probability, num_simulations, n=1):
-    simulated_probability = simulate_coin_tosses(n, num_simulations)
-    return n if simulated_probability > req_probability else find_tosses_needed(req_probability, num_simulations, n + 1)
-
-req_probability = 0.9
-num_simulations = 100000  # Number of times to simulate the coin tosses
-
-n = find_tosses_needed(req_probability, num_simulations)
-
-print(f"Number of tosses needed to get atleast 1 Heads > {req_probability}: {n}")
-
+print(f"Number of coin tosses needed to exceed {target_probability*100}% probability: {num_tosses_needed}")
+data_bern = bernoulli.rvs(size=100000 ,p=target_probability)
+err_ind = np.nonzero(data_bern == 1)
+#print(np.size(err_ind))
+print("Probability-simulation,actual:",np.size(err_ind)/100000)
+#print("Samples generated:",data_bern)
