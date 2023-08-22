@@ -217,8 +217,9 @@ EE22BTECH11006
 Question 12.13.10.6 - How many times must a man toss a fair coin so that the probability of having at least one head is more than 90\% ?\\
 
 \solution Let, $X_i$ be the sequence of independent Bernoulli random varibles. 
-
-\implies $X &= \sum_{0}^{k}X_i$
+\begin{align}
+\implies X &= \sum_{0}^{k}X_i
+\end{align}
 \begin{align}
 X_i &= 
   \begin{cases}
@@ -228,10 +229,13 @@ X_i &=
 \end{align}
 which means
 \begin{align}
-p &= p_{X_i}\brak{1} =0.5\\
-q &= p_{X_i}\brak{0} = 0.5
+(p,q)&=
+	\begin{cases}
+		p_{X_i}\brak{1} =0.5\\
+		p_{X_i}\brak{0} = 0.5
+	\end{cases}
 \end{align} 
-Let, the total number of trials be n and the pmf of getting k heads is given by:
+Let, the total number of trials be $n$ and the pmf of getting $k$ heads is given by:
 \begin{align}
 p_X\brak{k} &= \pr{X=k}\\
 &= \comb{n}{k}\brak{p}^k\brak{q}^{n-k}\\
@@ -239,23 +243,19 @@ p_X\brak{k} &= \pr{X=k}\\
 \end{align}  
 The cdf for the following pmf:
 \begin{align}
-F_X(k) &= p_X(0)+p_X(1)+ ... +p_X(k)\\
-&= \comb{n}{0}\brak{0.5}^n\brak{0.5}^0+\comb{n}{1}\brak{0.5}^{n-1}\brak{0.5}^1 + ... +\comb{n}{k}\brak{0.5}^{n-k}\brak{0.5}^k\\
+F_X(k) &= \sum_{i=0}^{k}p_X(i)\\
 &= \sum_{i=0}^{k}\comb{n}{i}\brak{0.5}^{n-i}\brak{0.5}^i
 \end{align}
 Then the probability of getting atleast 1 heads is:
 \begin{align}
 \pr{X\geq1} &> 0.9 \\
-1 - p_{X}(0) &> 0.9\\
-1 - F_X\brak{0} &> 0.9\\
+\implies 1 - p_{X}(0) &> 0.9\\
 1 - \comb{n}{0}\brak{0.5}^n\brak{0.5}^0 &>0.9\\
 1 - \brak{0.5}^n &>0.9\\
-0.1 &> \brak{0.5}^n\\
 \brak{2}^n &> 10
 \end{align}
 Taking ln both side we get:
 \begin{align}
-n\ln(2)&> \ln(10)\\
 n&>\log_2(10)\\
 \implies n &> 3.32
 \end{align}
