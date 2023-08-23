@@ -214,11 +214,11 @@ EE22BTECH11006
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
 
-Question 12.13.10.6 - How many times must a man toss a fair coin so that the probability of having at least one head is more than 90\% ?\\
+Question 12.13.6.10 - How many times must a man toss a fair coin so that the probability of having at least one head is more than 90\% ?\\
 
 \solution Let, $X_i$ be the sequence of independent Bernoulli random varibles. 
 \begin{align}
-\implies X &= \sum_{0}^{k}X_i
+\implies X &= \sum_{0}^{n}X_i
 \end{align}
 \begin{align}
 X_i &= 
@@ -229,10 +229,10 @@ X_i &=
 \end{align}
 which means
 \begin{align}
-(p,q)&=
+p_{X}\brak{k}&=
 	\begin{cases}
-		p_{X_i}\brak{1} =0.5\\
-		p_{X_i}\brak{0} = 0.5
+		0.5 = p ,k=0\\
+		0.5 = q ,k=1
 	\end{cases}
 \end{align} 
 Let, the total number of trials be $n$ and the pmf of getting $k$ heads is given by:
@@ -257,6 +257,9 @@ Taking ln both side we get:
 n&>\log_2(10)\\
 \implies n &> 3.32
 \end{align}
-As we know, n can be a positive integer value.\\
-So, n = 4.
+As we know, $n$ can be a positive integer value.\\
+So, 
+\begin{align}
+\implies n &= 4
+\end{align}
 \end{document}
