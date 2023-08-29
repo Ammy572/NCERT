@@ -221,41 +221,70 @@ as D, what are the probabilities that
 \item A will not be selected?
 \end{enumerate}
 \solution 
-Given, 
+Let $X_A,X_B,X_C,X_D$ be the random variables representing A,B,C,D respectively. 
 \begin{align}
-\pr{A} &= 2\pr{B}\\
-\pr{B} &= \pr{C}\\
-\pr{C} &= 2\pr{D}
+X_A &=
+	\begin{cases}
+	1 & $A is selected$\\
+	0 & $A is not selected$
+	\end{cases}
 \end{align}
-Let, 
 \begin{align}
-\pr{B} &= x
+X_B &= 
+	\begin{cases}
+	1 & $B is selected$\\
+	0 & $B is not selected$ 
+	\end{cases}
 \end{align}
-then,
 \begin{align}
-\pr{A} &= 2x \\
-\pr{B} = \pr{C} &= x\\
-\pr{D} &= \frac{x}{2}
+X_C &= 
+	\begin{cases}
+	1 & $C is selected$\\
+	0 & $C is not selected$
+	\end{cases}
 \end{align}
-and 
 \begin{align}
-\pr{A}+\pr{B}+\pr{C}+\pr{D} &= 1\\
+X_D &= 
+	\begin{cases}
+	1 & $D is selected$\\
+	0 & $D is not selected$
+	\end{cases}
+\end{align}
+Given,
+\begin{align}
+\pr{X_A = 1} &= 2\pr{X_B =1}\\
+\pr{X_B = 1} &= \pr{X_C = 1}\\
+\pr{X_C = 1} &= 2\pr{X_D = 1}
+\end{align}
+representing all in terms of 1 varible x,
+\begin{align}
+\pr{X_B = 1} &= x\\
+\pr{X_A = 1} &= 2x \\
+\pr{X_B = 1} = \pr{X_C = 1} &= x\\
+\pr{X_D = 1} &= \frac{x}{2}
+\end{align}
+and we know sum of probabilities of all candidates must be equal to 1 	
+\begin{align}
+\pr{X_A = 1}+\pr{X_B = 1}+\pr{X_C = 1}+\pr{X_D = 1} &= 1
+\end{align}
+So,
+\begin{align}
 2x + x + x + \frac{x}{2} &= 1\\
-\implies \pr{B} &= \frac{2}{9}
+\implies \pr{X_B = 1} &= \frac{2}{9}
 \end{align}
 \begin{enumerate}
 \item 
 For C getting selected:
 \begin{align}
-\pr{C} &= \pr{B}\\
-\implies \pr{C} &= \frac{2}{9}
+\pr{X_C = 1} &= \pr{X_B = 1}\\
+\implies \pr{X_C = 1} &= \frac{2}{9}
 \end{align}
 \item
 For A not getting selected:
 \begin{align}
-\pr{A^'} &= 1 - \pr{A}\\
-&= 1 - 2\pr{B}\\
+\pr{X_A = 0} &= 1 - \pr{X_A = 1}\\
+&= 1 - 2\pr{X_B = 1}\\
 &= 1 - \frac{4}{9}\\
-\implies \pr{A^'} &= \frac{5}{9}
+\implies \pr{X_A = 0} &= \frac{5}{9}
 \end{align}
 \end{document}
