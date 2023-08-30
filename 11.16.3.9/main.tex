@@ -1,3 +1,4 @@
+
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -221,50 +222,46 @@ as D, what are the probabilities that
 \item A will not be selected?
 \end{enumerate}
 \solution 
-Let $X_i$ be the random variables where $i = 1,2,3,4$ represents A,B,C,D respectively. 
+Let $X$ be a random variable
 \begin{align}
-X_i &=
+X &=
 	\begin{cases}
-	1 & $ selected$\\
-	0 & $ not selected$
+		0 & \text{A is selected}\\
+		1 & \text{B is selected}\\
+		2 & \text{C is selected}\\
+		3 & \text{D is selected}
 	\end{cases}
 \end{align}
 
 Given,
 \begin{align}
-\pr{X_1 = 1} &= 2\pr{X_2 =1}\\
-\pr{X_2 = 1} &= \pr{X_3 = 1}\\
-\pr{X_3 = 1} &= 2\pr{X_4 = 1}
+	p_X\brak{0} &= 2p_X\brak{1}\\
+	p_X\brak{1} &= p_X\brak{2}\\
+	p_X\brak{2} &= 2p_X\brak{3}
 \end{align}
-representing all in terms of 1 varible x,
+Using axioms of probability:
 \begin{align}
-\pr{X_2 = 1} &= x\\
-\pr{X_1 = 1} &= 2x \\
-\pr{X_2 = 1} = \pr{X_3 = 1} &= x\\
-\pr{X_4 = 1} &= \frac{x}{2}
+\sum_{k=0}^{3} p_X\brak{k} &= 1
 \end{align}
-and we know sum of probabilities of all candidates must be equal to 1 	
+which gives
 \begin{align}
-\pr{X_1 = 1}+\pr{X_2 = 1}+\pr{X_3 = 1}+\pr{X_4 = 1} &= 1
-\end{align}
-So,
-\begin{align}
-2x + x + x + \frac{x}{2} &= 1\\
-\implies \pr{X_2 = 1} &= \frac{2}{9}
+p_X\brak{0} &= \frac{4}{9}\\
+p_X\brak{1} &= \frac{2}{9}\\
+p_X\brak{2} &= \frac{2}{9}\\
+p_X\brak{3} &= \frac{1}{9}
 \end{align}
 \begin{enumerate}
 \item 
 For C getting selected:
 \begin{align}
-\pr{X_3 = 1} &= \pr{X_2 = 1}\\
-\implies \pr{X_3 = 1} &= \frac{2}{9}
+\implies p_X\brak{2} &= \frac{2}{9}
 \end{align}
 \item
 For A not getting selected:
 \begin{align}
-\pr{X_1 = 0} &= 1 - \pr{X_1 = 1}\\
-&= 1 - 2\pr{X_2 = 1}\\
+&= 1 - p_X\brak{1}\\
 &= 1 - \frac{4}{9}\\
-\implies \pr{X_1 = 0} &= \frac{5}{9}
+&\implies \frac{5}{9}
 \end{align}
+\end{enumerate}
 \end{document}
