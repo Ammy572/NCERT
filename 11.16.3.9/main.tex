@@ -221,70 +221,50 @@ as D, what are the probabilities that
 \item A will not be selected?
 \end{enumerate}
 \solution 
-Let $X_A,X_B,X_C,X_D$ be the random variables representing A,B,C,D respectively. 
+Let $X_i$ be the random variables where $i = 1,2,3,4$ represents A,B,C,D respectively. 
 \begin{align}
-X_A &=
+X_i &=
 	\begin{cases}
-	1 & $A is selected$\\
-	0 & $A is not selected$
+	1 & $ selected$\\
+	0 & $ not selected$
 	\end{cases}
 \end{align}
-\begin{align}
-X_B &= 
-	\begin{cases}
-	1 & $B is selected$\\
-	0 & $B is not selected$ 
-	\end{cases}
-\end{align}
-\begin{align}
-X_C &= 
-	\begin{cases}
-	1 & $C is selected$\\
-	0 & $C is not selected$
-	\end{cases}
-\end{align}
-\begin{align}
-X_D &= 
-	\begin{cases}
-	1 & $D is selected$\\
-	0 & $D is not selected$
-	\end{cases}
-\end{align}
+
 Given,
 \begin{align}
-\pr{X_A = 1} &= 2\pr{X_B =1}\\
-\pr{X_B = 1} &= \pr{X_C = 1}\\
-\pr{X_C = 1} &= 2\pr{X_D = 1}
+\pr{X_1 = 1} &= 2\pr{X_2 =1}\\
+\pr{X_2 = 1} &= \pr{X_3 = 1}\\
+\pr{X_3 = 1} &= 2\pr{X_4 = 1}
 \end{align}
 representing all in terms of 1 varible x,
 \begin{align}
-\pr{X_B = 1} &= x\\
-\pr{X_A = 1} &= 2x \\
-\pr{X_B = 1} = \pr{X_C = 1} &= x\\
-\pr{X_D = 1} &= \frac{x}{2}
+\pr{X_2 = 1} &= x\\
+\pr{X_1 = 1} &= 2x \\
+\pr{X_2 = 1} = \pr{X_3 = 1} &= x\\
+\pr{X_4 = 1} &= \frac{x}{2}
 \end{align}
 and we know sum of probabilities of all candidates must be equal to 1 	
 \begin{align}
-\pr{X_A = 1}+\pr{X_B = 1}+\pr{X_C = 1}+\pr{X_D = 1} &= 1
+\pr{X_1 = 1}+\pr{X_2 = 1}+\pr{X_3 = 1}+\pr{X_4 = 1} &= 1
 \end{align}
 So,
 \begin{align}
 2x + x + x + \frac{x}{2} &= 1\\
-\implies \pr{X_B = 1} &= \frac{2}{9}
+\implies \pr{X_2 = 1} &= \frac{2}{9}
 \end{align}
 \begin{enumerate}
 \item 
 For C getting selected:
 \begin{align}
-\pr{X_C = 1} &= \pr{X_B = 1}\\
-\implies \pr{X_C = 1} &= \frac{2}{9}
+\pr{X_3 = 1} &= \pr{X_2 = 1}\\
+\implies \pr{X_3 = 1} &= \frac{2}{9}
 \end{align}
 \item
 For A not getting selected:
 \begin{align}
-\pr{X_A = 0} &= 1 - \pr{X_A = 1}\\
-&= 1 - 2\pr{X_B = 1}\\
+\pr{X_1 = 0} &= 1 - \pr{X_1 = 1}\\
+&= 1 - 2\pr{X_2 = 1}\\
 &= 1 - \frac{4}{9}\\
-\implies \pr{X_A = 0} &= \frac{5}{9}
+\implies \pr{X_1 = 0} &= \frac{5}{9}
 \end{align}
 \end{document}
