@@ -245,10 +245,13 @@ Using axioms of probability:
 \end{align}
 which gives
 \begin{align}
-p_X\brak{0} &= \frac{4}{9}\\
-p_X\brak{1} &= \frac{2}{9}\\
-p_X\brak{2} &= \frac{2}{9}\\
-p_X\brak{3} &= \frac{1}{9}
+p_X\brak{k} &= 
+	\begin{cases}
+	\frac{4}{9} & k = 0\\
+	\frac{2}{9} & k = 1\\
+	\frac{2}{9} & k = 2\\
+	\frac{1}{9} & k = 3 
+	\end{cases}
 \end{align}
 \begin{enumerate}
 \item 
@@ -261,7 +264,7 @@ For A not getting selected:
 \begin{align}
 &= 1 - p_X\brak{1}\\
 &= 1 - \frac{4}{9}\\
-&\implies \frac{5}{9}
+&= \frac{5}{9}
 \end{align}
 \end{enumerate}
 \end{document}
