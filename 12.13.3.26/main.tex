@@ -236,9 +236,24 @@ Given, $X$ be the random variable and $p_{X}$ is the probability distribution.\\
 Standard deviation is given by\\
 \begin{align}
  \sigma_X &= \sqrt{E(X^2)-E(X)^2}\\
- &= \sqrt{\sum_{i=1}^{n}{X_i^2p_X_{i}} - [\sum_{i=1}^{n}{X_ip_X_{i}}]^2}\\
- &= \sqrt{(2)^2(0.2)+(3)^2(0.5)+(4)^2(0.3)-\brak{(2)(0.2)+(3)(0.5)+(4)(0.3)}^2}\\
- &= \sqrt{10.1-9.61}\\
+ &= \sqrt{\sum_{i=1}^{n}{X_i^2p_X_{i}} - [\sum_{i=1}^{n}{X_ip_X_{i}}]^2}
+\end{align}
+
+Now,
+\begin{align}
+ {E(X^2)&= \sum_{i=1}^{n}{X_i^2p_X_{i}}}\\
+ &= (2)^2(0.2)+(3)^2(0.5)+(4)^2(0.3)\\
+ &= 10.1
+\end{align}
+Similarly,
+\begin{align}
+ {E(X)}^2 &= [\sum_{i=1}^{n}{X_ip_X_{i}}]^2\\
+ &= [(2)(0.2)+(3)(0.5)+(4)(0.3)]^2\\
+ &= 9.61
+\end{align}
+Now putting the values in eqn (2):
+\begin{align}
+\sigma_X &= \sqrt{10.1-9.61}\\
  &= 0.7
 \end{align} 
 \end{document}
