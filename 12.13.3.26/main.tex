@@ -233,22 +233,26 @@ Question: For the following probability distribution determine standard deviatio
 
 \solution 
 Given, $X$ be the random variable and $p_{X}$ is the probability distribution.\\
-Standard deviation is given by\\
+Variance of X is given by
 \begin{align}
- \sigma_X &= \sqrt{E(X^2)-E(X)^2}\\
+\sigma_X^2 &= E[X-E(X)]^2\\
+&= E[X^2+[E(X)]^2-2XE(X)]\\
+&= E(X^2)+[E(X)^2-2[E(X)]^2]\\
+&= E(X^2)-[E(X)]^2
+\end{align}  
+and, Standard deviation is given by
+\begin{align}
+ \sigma_X &= \sqrt{E(X^2)-[E(X)]^2}\\
  &= \sqrt{\sum_{i=1}^{n}{X_i^2p_X_{i}} - [\sum_{i=1}^{n}{X_ip_X_{i}}]^2}
 \end{align}
-
 Now,
 \begin{align}
  {E(X^2)&= \sum_{i=1}^{n}{X_i^2p_X_{i}}}\\
- &= (2)^2(0.2)+(3)^2(0.5)+(4)^2(0.3)\\
  &= 10.1
 \end{align}
 Similarly,
 \begin{align}
- {E(X)}^2 &= [\sum_{i=1}^{n}{X_ip_X_{i}}]^2\\
- &= [(2)(0.2)+(3)(0.5)+(4)(0.3)]^2\\
+ [E(X)]^2 &= [\sum_{i=1}^{n}{X_ip_X_{i}}]^2\\
  &= 9.61
 \end{align}
 Now putting the values in eqn (2):
