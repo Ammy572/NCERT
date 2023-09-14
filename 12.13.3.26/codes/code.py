@@ -1,15 +1,16 @@
-# Values of X and their corresponding probabilities
-values = [2, 3, 4]
-probabilities = [0.2, 0.5, 0.3]
+import numpy as np
 
-# Calculate the mean (expected value) of X
-mean = sum(x * p for x, p in zip(values, probabilities))
+values = np.array([2, 3, 4])
+probabilities = np.array([0.2, 0.5, 0.3])
+
+# Calculate the mean of X
+mean = np.sum(values * probabilities)
 
 # Calculate the variance of X
-variance = sum((x - mean)**2 * p for x, p in zip(values, probabilities))
+variance = np.sum((values - mean)**2 * probabilities)
 
-# Calculate the standard deviation of X (square root of the variance)
-std_deviation = variance**0.5  # Using exponentiation for square root
+# Calculate the standard deviation of X
+std_deviation = np.sqrt(variance)
 
 # Print the results
 print(f"Mean (Expected Value): {mean}")
